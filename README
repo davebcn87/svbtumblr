@@ -1,3 +1,8 @@
+This is a fork of the svbtumblr theme. I use this in my blog davidcortes.tumblr.com
+
+Original README
+---------------
+
 Hey there. svbtumblr is my attempt to convert Dustin Curtis' http://svbtle.com into a Tumblr theme.
 
 To install, turn on full customization in Tumblr, and then copy and paste the HTML. Search the HTML for "yoururl.com" and change the URL to your own, along with your Twitter username and email address.
