@@ -473,16 +473,18 @@ div.pullback a:hover {
     border-color:#f00
 }
 section#sidebar {
-    width:260px;
+    width:27%;
     position:fixed;
     top:0;
     left:0;
     bottom:0;
     right:auto;
+    width: 27%;
+    min-width: 240px;
     min-height:690px
 }
 section#posts {
-    margin-left:260px;
+    margin-left:27%;
     border-left:1px solid #e2e2e2;
     min-width:710px;
     background-color:rgba(255,255,255,0.98);
@@ -561,7 +563,7 @@ article h2 a.no-link {
     font-size:30px;
     line-height:40px
 }
-article h2 span.anchor a {
+article h2 span.anchor a, article h1 span.anchor a {
     border-bottom:none;
     padding-left:10px;
     color:#777
@@ -579,9 +581,12 @@ article.modifyp p, article.modifyp h2 {
 article img,article object,article iframe {
     margin-top:20px;
     margin-bottom:15px;
-    margin-left:-50px
+
+    /*margin-left:-50px*/
 }
 article img {
+    height: auto;
+    max-width: 500px;
     border-radius:0;
     border-top-left-radius:0;
     border-bottom-left-radius:0
@@ -605,9 +610,11 @@ section#sidebar h1 {
     margin-bottom:10px
 }
 section#sidebar h1 a {
-    font-family:"freight-sans-pro",sans-serif;
-    font-weight:900;
-    font-size:38px;
+    color: #333;
+    font-family:"Futura",sans-serif;
+    font-weight:400;
+    text-transform: uppercase;
+    font-size:24px;
     line-height:60px;
     border:none;
     display:block;
@@ -648,7 +655,7 @@ ul#linkbar a {
     color:#999
 }
 ul#linkbar a:hover {
-    border:4px solid #ff0000	
+    border:4px solid #ff0000    
 }
 a.network_link {
     position:absolute;
@@ -685,14 +692,14 @@ figure#user_logo div.logo {
     margin-top:-42px;
     margin-left:-42px;
     border:2px solid #fff;
-    background:#000 url(http://static.tumblr.com/v96djat/zWLm2dswt/tumblricon3.png) center center no-repeat
+    background:#333 url(https://dl.dropbox.com/u/1264953/davidcortesTumblr/logo.png) center center no-repeat
 }
 figure#user_logo div.pulse {
     position:absolute;
     border-radius:50%;
     width:120px;
     height:120px;
-    border:10px solid #f00;
+    border:10px solid #000;
     left:50%;
     top:50%;
     margin-top:-70px;
@@ -941,7 +948,7 @@ footer#paginate a.continue:hover {
 	  	<figure id="cover_logo">
     		<div class="logo">&nbsp;</div>
     	</figure>
-		<h1 id="cover_user"><a href="/">dcurtis</a></h1>
+		<h1 id="cover_user"><a href="/">davebcn87</a></h1>
 	</section>
 	<section id="sidebar" class="fixed">
 		<figure id="user_logo">
@@ -953,10 +960,10 @@ footer#paginate a.continue:hover {
 		<h1 id="user"><a href="/" class="">{Title}</a></h1>
 		<h2>{Description}</h2>
 		<ul id="linkbar">
-			<li><a href="http://yoururl.com">yourURL.com</a></li>
-			<li><a href="http://twitter.com/twitter">@twitter</a></li>
-			<li><a href="mailto:hi@email.com?subject=hi">say hello</a></li>
+			<li><a href="http://davidcortes.tumblr.com">davidcortes.tumblr.com</a></li>
+			<li><a target="_blank" href="http://twitter.com/davebcn87">@davebcn87</a></li>
 			<li><a href="{RSS}">rss feed</a></li>
+            <li><a target="_blank" href="http://lafosca.cat">lafosca</a></li>
 		</ul>
 		<a href="http://diklein.com" class="network_link">Adapted for Tumblr by <span>David Klein</span>.</a>
 	</section>
@@ -972,7 +979,7 @@ footer#paginate a.continue:hover {
                     <h3 class="date postdate">POSTED {Month} {DayOfMonthWithZero}, {Year}</h3>
                 {/block:Date}
                 {block:Title}
-                    <h2>{Title} <span class="anchor"><a href="{Permalink}">⚓</a></span></h2>
+                    <h1>{Title} <span class="anchor"><a href="{Permalink}">⚓</a></span></h1>
                 {/block:Title}
                 <p>{Body}</p>
                 <a href="{Permalink}" class="kudos">
